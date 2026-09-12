@@ -7,15 +7,15 @@ X-WR-CALNAME:Voraussichtlich
 REFRESH-INTERVAL;VALUE=DURATION:PT6H
 X-PUBLISHED-TTL:PT6H
 BEGIN:VEVENT
-UID:prognose-frei-2026-W42@wdr-besatzungsliste
+UID:prognose-2026-W42@wdr-besatzungsliste
 DTSTAMP:20260909T055100Z
 LAST-MODIFIED:20260909T055100Z
-SEQUENCE:1
+SEQUENCE:0
 DTSTART;VALUE=DATE:20261009
 DTEND;VALUE=DATE:20261017
-SUMMARY:Voraussichtlich frei
+SUMMARY:Voraussichtlich Dienst auf SCHLESWIG - HOLSTEIN
 STATUS:TENTATIVE
-TRANSP:TRANSPARENT
-DESCRIPTION:Unbestaetigte Vermutung. In 2026/KW 41 Dienst auf UTHLANDE ohne Farbmarkierung des eigenen Namens - voraussichtlich abgeloest.
+TRANSP:OPAQUE
+DESCRIPTION:Unbestaetigte Vermutung. In 2026/KW 41 stand SCHLESWIG - HOLSTEIN links neben der eigenen Spalte.
 END:VEVENT
 END:VCALENDAR
