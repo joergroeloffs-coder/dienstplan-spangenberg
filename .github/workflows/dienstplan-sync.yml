@@ -2,10 +2,9 @@ name: Dienstplan Sync
 
 on:
   schedule:
-    # alle 12 Stunden (UTC). Oefter bringt nichts, weil Google Kalender
-    # externe ICS-Abos ohnehin nur alle 8-24 Stunden neu einliest.
-  
-    - cron: "17 * * * *"
+    # alle 30 Minuten (UTC).
+
+    - cron: "*/30 * * * *"
 
   workflow_dispatch: {}
 
@@ -35,15 +34,10 @@ jobs:
         env:
           WDR_USER: ${{ secrets.WDR_USER }}
           WDR_PASS: ${{ secrets.WDR_PASS }}
+          WDR_NAME_FRAGMENT: Spangenberg
           # Optional, sonst gelten die Vorgaben im Skript:
-          # WDR_NAME_FRAGMENT: Roeloffs
           # WDR_WEEKS_AHEAD: "8"
         run: python dienstplan_cloud_sync.py
-      - name: Push to Google Calendar
-        env:
-          GOOGLE_SA_KEY_B64: ${{ secrets.GOOGLE_SA_KEY_B64 }}
-          GOOGLE_CALENDAR_ID: ${{ secrets.GOOGLE_CALENDAR_ID }}
-        run: python google_calendar_push.py
       - name: Commit and push changes
         run: |
           git config user.name "dienstplan-bot"
