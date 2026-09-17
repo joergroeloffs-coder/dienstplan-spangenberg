@@ -34,6 +34,7 @@
       "10.09.2026": "6:00 Wittdün-Wyk\n7:15 Wyk-Dagebüll\n8:25 Dagebüll-Wyk\n9:35 Wyk-Dagebüll\n10:40 Dagebüll-Wyk\n11:50 Wyk-Dagebüll\n13:00 Dagebüll-Wyk (direkt)\n15:15 Wittdün-Wyk\n16:30 Wyk-Dagebüll\n18:00 Dagebüll-Wyk\n19:00 Wyk-Wittdün",
       "11.09.2026": "6:00 Wittdün-Wyk\n7:15 Wyk-Dagebüll\n8:25 Dagebüll-Wyk\n9:35 Wyk-Dagebüll\n10:40 Dagebüll-Wyk\n11:50 Wyk-Dagebüll\n13:00 Dagebüll-Wyk (direkt)\n15:15 Wittdün-Wyk\n16:30 Wyk-Dagebüll\n18:00 Dagebüll-Wyk"
     },
+    "besatzung_text": "NK Hinrichsen, Jesper\nNEO Schäfer, Hagen\nTLM Kohn, Marco\nGSM Sievers, Jon\nNWB Porath, Ingo\nNW Bohn, Hauke\nNW Spangenberg, Jan Tim\nNWB* Moths, Holger\nAz Döhmen, Simon",
     "category": "SCHLESWIG - HOLSTEIN",
     "date_from": "2026-09-04",
     "date_to": "2026-09-11",
@@ -58,6 +59,7 @@
       "17.09.2026": "6:00 Wittdün-Wyk\n7:15 Wyk-Dagebüll\n8:25 Dagebüll-Wyk\n9:35 Wyk-Dagebüll\n10:40 Dagebüll-Wyk\n11:50 Wyk-Dagebüll\n13:00 Dagebüll-Wyk (direkt)\n15:15 Wittdün-Wyk\n16:30 Wyk-Dagebüll\n18:00 Dagebüll-Wyk\n19:00 Wyk-Wittdün",
       "18.09.2026": "6:00 Wittdün-Wyk\n7:15 Wyk-Dagebüll\n8:25 Dagebüll-Wyk\n9:35 Wyk-Dagebüll\n10:40 Dagebüll-Wyk\n11:50 Wyk-Dagebüll\n13:00 Dagebüll-Wyk (direkt)\n15:15 Wittdün-Wyk\n16:30 Wyk-Dagebüll\n18:00 Dagebüll-Wyk\n19:00 Wyk-Wittdün"
     },
+    "besatzung_text": "NK Hellmann, Johann-Eck\nNEO Roeloffs, Jörg\nTLM Erichsen, Torge\nGSM Christiansen, Timo\nNWB Matthiesen, Stephan\nNW Spangenberg, Jan Tim\nNWB* Müller, Jan\nAz Döhmen, Simon",
     "category": "SCHLESWIG - HOLSTEIN",
     "date_from": "2026-09-11",
     "date_to": "2026-09-18",
@@ -85,6 +87,7 @@
     "summary": "Freie Tage"
   },
   "2026-W40": {
+    "besatzung_text": "NK Helms, Leander\nNEO Schäfer, Hagen\nTLM Erichsen, Torge\nGSM Petersen, Dennis\nNWB Matthiesen, Stephan\nNW Spangenberg, Jan Tim\nNWB* Müller, Jan\nAz Döhmen, Simon",
     "category": "SCHLESWIG - HOLSTEIN",
     "date_from": "2026-09-25",
     "date_to": "2026-10-02",
@@ -112,6 +115,7 @@
     "summary": "Freie Tage"
   },
   "2026-W42": {
+    "besatzung_text": "NK Helms, Leander\nNEO Szönyi, Daniel\nTLM Erichsen, Torge\nGSM Petersen, Dennis\nNWB Matthiesen, Stephan\nNW Spangenberg, Jan Tim\nNWB* Müller, Jan",
     "category": "SCHLESWIG - HOLSTEIN",
     "date_from": "2026-10-09",
     "date_to": "2026-10-16",
