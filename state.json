@@ -44,7 +44,8 @@
     "rang": "NW",
     "revision": 4,
     "sequence": 0,
-    "summary": "Dienst auf SCHLESWIG - HOLSTEIN"
+    "summary": "Dienst auf SCHLESWIG - HOLSTEIN",
+    "vorgaenger_text": "NK Hellmann, Johann-Eck\nNEO Donau, Markus\nTLM Strobel, Aike\nGSM Petersen, Dennis\nNWB Matthiesen, Stephan\nNWB Paulsen, Henrik\nNWB* Benmerad, Reda\nAz Döhmen, Simon"
   },
   "2026-W38": {
     "abfahrten_pro_tag": {
@@ -67,7 +68,8 @@
     "rang": "NW",
     "revision": 4,
     "sequence": 1,
-    "summary": "Dienst auf SCHLESWIG - HOLSTEIN"
+    "summary": "Dienst auf SCHLESWIG - HOLSTEIN",
+    "vorgaenger_text": "NK Hinrichsen, Jesper\nNEO Schäfer, Hagen\nTLM Kohn, Marco\nGSM Sievers, Jon\nNWB Porath, Ingo\nNW Bohn, Hauke\nNW Spangenberg, Jan Tim\nNWB* Moths, Holger\nAz Döhmen, Simon"
   },
   "2026-W39": {
     "category": "Freie Tage",
@@ -93,7 +95,8 @@
     "rang": "NW",
     "revision": 1,
     "sequence": 0,
-    "summary": "Dienst auf SCHLESWIG - HOLSTEIN"
+    "summary": "Dienst auf SCHLESWIG - HOLSTEIN",
+    "vorgaenger_text": "NK Englmaier, Jan\nNEO Donau, Markus\nTLM Kohn, Marco\nGSM Sievers, Jon\nNWB Porath, Ingo\nNWB Hansen, Frithjof\nNWB* Benmerad, Reda\nAz Döhmen, Simon"
   },
   "2026-W41": {
     "category": "Freie Tage",
@@ -119,7 +122,8 @@
     "rang": "NW",
     "revision": 0,
     "sequence": 1,
-    "summary": "Dienst auf SCHLESWIG - HOLSTEIN"
+    "summary": "Dienst auf SCHLESWIG - HOLSTEIN",
+    "vorgaenger_text": "NK Englmaier, Jan\nNEO Silberstein, Thimo\nTLM Kohn, Marco\nGSM Sievers, Jon\nNWB Porath, Ingo\nNWB Fabrizius, Philipp\nNWB* Benmerad, Reda\nAz Döhmen, Simon"
   },
   "2026-W43": {
     "category": null,
