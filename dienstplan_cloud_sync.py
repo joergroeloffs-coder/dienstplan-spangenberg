@@ -1026,6 +1026,31 @@ def main():
             f"({rev_text}, Stand {mtime or 'unbekannt'})"
         )
 
+    # Backfill: bestehende Dienstwochen, die noch keine eigene Besatzung
+    # haben (z.B. weil sie vor Einfuehrung dieses Felds erfasst wurden),
+    # ohne dass sich an der Woche selbst etwas geaendert haben muss.
+    for key, entry in state.items():
+        if not ist_schiff(entry.get("category", "") or ""):
+            continue
+        if entry.get("besatzung_text"):
+            continue
+        eigene_woche = index.get(
+            tuple(int(p) for p in key.split("-W"))
+        )
+        if not eigene_woche:
+            continue
+        _, eigene_href, _, _ = eigene_woche
+        eigene_resp = session.get(f"{BASE_URL}/{eigene_href}", timeout=30)
+        if eigene_resp.status_code != 200 or eigene_resp.content[:4] != b"%PDF":
+            continue
+        with pdfplumber.open(BytesIO(eigene_resp.content)) as eigene_pdf:
+            besatzung = find_crew_for_kategorie(eigene_pdf, entry["category"])
+        besatzung_text = format_besatzung_text(besatzung)
+        if besatzung_text:
+            entry["besatzung_text"] = besatzung_text
+            changed = True
+            print(f"KW {key}: eigene Besatzung nachgetragen (Backfill)")
+
     # Backfill: bestehende Dienstwochen, die noch keine Vorwoche-Besatzung
     # haben (z.B. weil sie vor Einfuehrung dieses Felds erfasst wurden),
     # ohne Neu-Download der eigenen Besatzungsliste nachtragen.
