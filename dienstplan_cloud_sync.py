@@ -532,6 +532,10 @@ def farbe_fuer_namen(words, rects, ship_hue, xrange, row_bbox, fragment):
 
 def find_status_for_name(pdf, target_name_fragment):
     hits = []
+    # Kopfzeilen bleiben ueber Tabellen-/Seitengrenzen hinweg gueltig: manche
+    # Bloecke sind Fortsetzungen ohne eigene Kopfzeile - ohne das wuerden
+    # deren Zeilen (Spalte "UNBEKANNT") stillschweigend uebersprungen.
+    headers = {}
     for page in pdf.pages:
         rects = fill_rects(page)
         words = page.extract_words()
@@ -540,7 +544,6 @@ def find_status_for_name(pdf, target_name_fragment):
         for table in page.find_tables():
             rows = table.extract()
             pairs = column_pairs(table)
-            headers = {}
             for row, meta in zip(rows, table.rows):
                 ncols = len(row)
                 is_header = True
@@ -588,6 +591,54 @@ def find_status_for_name(pdf, target_name_fragment):
     return hits
 
 
+def find_crew_for_kategorie(pdf, kategorie):
+    """Alle Besatzungsmitglieder (Rang, Name) der Spalte, deren Kopfzeile
+    zu `kategorie` passt (z.B. das eigene Schiff) - unabhaengig vom
+    gesuchten Namen. Nur fuer diese Koch-Kopie eingebaut: der Koch soll
+    sehen, wer in seiner Dienstwoche auf demselben Schiff faehrt, um
+    Allergien/Vorlieben zu beruecksichtigen (nicht Teil des Original-
+    Dienstplans)."""
+    ziel_norm = norm(kategorie)
+    besatzung = []
+    # Kopfzeilen bleiben ueber Tabellen-/Seitengrenzen hinweg gueltig, siehe
+    # find_status_for_name().
+    headers = {}
+    for page in pdf.pages:
+        for table in page.find_tables():
+            rows = table.extract()
+            pairs = column_pairs(table)
+            for row, meta in zip(rows, table.rows):
+                ncols = len(row)
+                is_header = True
+                any_text = False
+                for i in range(0, ncols, 2):
+                    even = (row[i] or "").strip()
+                    odd = row[i + 1].strip() if i + 1 < ncols and row[i + 1] else ""
+                    if even:
+                        any_text = True
+                        if odd or even.upper() in KNOWN_RANKS:
+                            is_header = False
+                if not any_text:
+                    continue
+                if is_header:
+                    headers = headers_in_band(
+                        page, table, meta.bbox[1], meta.bbox[3], pairs
+                    )
+                    continue
+                for i in range(0, ncols, 2):
+                    if norm(headers.get(i, "")) != ziel_norm:
+                        continue
+                    rang = (row[i] or "").strip()
+                    name = row[i + 1].strip() if i + 1 < ncols and row[i + 1] else ""
+                    if name:
+                        besatzung.append((rang, name))
+    return besatzung
+
+
+def format_besatzung_text(besatzung):
+    return "\n".join(f"{rang} {name}".strip() for rang, name in besatzung)
+
+
 def ics_escape(text):
     return (
         str(text)
@@ -620,6 +671,12 @@ def build_vevent(iso_year, iso_week, entry):
         f"KW {iso_week}/{iso_year}\\, Stand: {ics_escape(stand)}\\, "
         f"Datei: {ics_escape(entry.get('file', '?'))}"
     )
+    besatzung_text = entry.get("besatzung_text")
+    if besatzung_text:
+        beschreibung += "\\n\\nBesatzung:\\n" + ics_escape(besatzung_text)
+    vorgaenger_text = entry.get("vorgaenger_text")
+    if vorgaenger_text:
+        beschreibung += "\\n\\nVorwoche (steigt aus):\\n" + ics_escape(vorgaenger_text)
     return (
         "BEGIN:VEVENT\r\n"
         f"UID:{uid}\r\n"
@@ -661,6 +718,14 @@ def build_tages_vevents(iso_year, iso_week, entry):
             f"KW {iso_week}/{iso_year}\\, Stand: {ics_escape(stand)}\\, "
             f"Datei: {ics_escape(entry.get('file', '?'))}"
         )
+        besatzung_text = entry.get("besatzung_text")
+        if besatzung_text:
+            beschreibung += "\\n\\nBesatzung:\\n" + ics_escape(besatzung_text)
+        vorgaenger_text = entry.get("vorgaenger_text")
+        if vorgaenger_text:
+            beschreibung += (
+                "\\n\\nVorwoche (steigt aus):\\n" + ics_escape(vorgaenger_text)
+            )
         tages_abfahrten = pro_tag.get(tag.strftime("%d.%m.%Y"))
         if tages_abfahrten:
             beschreibung += "\\n\\nAbfahrten:\\n" + ics_escape(tages_abfahrten)
@@ -685,6 +750,17 @@ def next_week_key(key):
     year, week = key.split("-W")
     try:
         monday = date.fromisocalendar(int(year), int(week), 1) + timedelta(days=7)
+    except ValueError:
+        return None
+    y, w, _ = monday.isocalendar()
+    return f"{y}-W{w:02d}"
+
+
+def prev_week_key(key):
+    """'2026-W39' -> '2026-W38', ueber den Jahreswechsel hinweg."""
+    year, week = key.split("-W")
+    try:
+        monday = date.fromisocalendar(int(year), int(week), 1) - timedelta(days=7)
     except ValueError:
         return None
     y, w, _ = monday.isocalendar()
@@ -890,6 +966,26 @@ def main():
         with pdfplumber.open(BytesIO(resp.content)) as pdf:
             d_from, d_to = parse_date_range(pdf)
             hits = find_status_for_name(pdf, TARGET_NAME)
+            besatzung_text = None
+            if hits and ist_schiff(hits[0][0]):
+                besatzung = find_crew_for_kategorie(pdf, hits[0][0])
+                besatzung_text = format_besatzung_text(besatzung)
+
+        vorgaenger_text = None
+        if hits and ist_schiff(hits[0][0]):
+            # Wer war die Woche zuvor auf demselben Schiff an Bord (und
+            # steigt jetzt aus) - eigene Besatzungsliste der Vorwoche.
+            vorwoche = prev_week_key(key)
+            vorwoche_gefunden = index.get(
+                tuple(int(p) for p in vorwoche.split("-W"))
+            ) if vorwoche else None
+            if vorwoche_gefunden:
+                _, vw_href, _, _ = vorwoche_gefunden
+                vw_resp = session.get(f"{BASE_URL}/{vw_href}", timeout=30)
+                if vw_resp.status_code == 200 and vw_resp.content[:4] == b"%PDF":
+                    with pdfplumber.open(BytesIO(vw_resp.content)) as vw_pdf:
+                        vorgaenger = find_crew_for_kategorie(vw_pdf, hits[0][0])
+                        vorgaenger_text = format_besatzung_text(vorgaenger)
 
         if not hits:
             print(
@@ -918,6 +1014,8 @@ def main():
             "nachbar_links": links,
             "farbe_schiff": farbe,
             "rang": rank,
+            "besatzung_text": besatzung_text,
+            "vorgaenger_text": vorgaenger_text,
             "sequence": (prev.get("sequence", 0) + 1) if prev else 0,
         }
         state[key] = entry
@@ -927,6 +1025,32 @@ def main():
             f"KW {iso_week}/{iso_year}: {entry['summary']} "
             f"({rev_text}, Stand {mtime or 'unbekannt'})"
         )
+
+    # Backfill: bestehende Dienstwochen, die noch keine Vorwoche-Besatzung
+    # haben (z.B. weil sie vor Einfuehrung dieses Felds erfasst wurden),
+    # ohne Neu-Download der eigenen Besatzungsliste nachtragen.
+    for key, entry in state.items():
+        if not ist_schiff(entry.get("category", "") or ""):
+            continue
+        if entry.get("vorgaenger_text"):
+            continue
+        vorwoche = prev_week_key(key)
+        vorwoche_gefunden = index.get(
+            tuple(int(p) for p in vorwoche.split("-W"))
+        ) if vorwoche else None
+        if not vorwoche_gefunden:
+            continue
+        _, vw_href, _, _ = vorwoche_gefunden
+        vw_resp = session.get(f"{BASE_URL}/{vw_href}", timeout=30)
+        if vw_resp.status_code != 200 or vw_resp.content[:4] != b"%PDF":
+            continue
+        with pdfplumber.open(BytesIO(vw_resp.content)) as vw_pdf:
+            vorgaenger = find_crew_for_kategorie(vw_pdf, entry["category"])
+        vorgaenger_text = format_besatzung_text(vorgaenger)
+        if vorgaenger_text:
+            entry["vorgaenger_text"] = vorgaenger_text
+            changed = True
+            print(f"KW {key}: Vorwoche-Besatzung nachgetragen (Backfill)")
 
     prune_state(state, PRUNE_WEEKS)
 
