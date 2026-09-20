@@ -74,17 +74,19 @@
     "vorgaenger_text": "NK Hinrichsen, Jesper\nNEO Schäfer, Hagen\nTLM Kohn, Marco\nGSM Sievers, Jon\nNWB Porath, Ingo\nNW Bohn, Hauke\nNW Spangenberg, Jan Tim\nNWB* Moths, Holger\nAz Döhmen, Simon"
   },
   "2026-W39": {
+    "besatzung_text": null,
     "category": "Freie Tage",
     "date_from": "2026-09-18",
     "date_to": "2026-09-25",
     "farbe_schiff": null,
-    "file": "39KW2026 2. Änderung.pdf",
-    "mtime": "2026-09-13 19:53",
+    "file": "39KW2026 3. Änderung.pdf",
+    "mtime": "2026-09-20 17:30",
     "nachbar_links": "SCHLESWIG - HOLSTEIN",
     "rang": "NW",
-    "revision": 2,
-    "sequence": 1,
-    "summary": "Freie Tage"
+    "revision": 3,
+    "sequence": 2,
+    "summary": "Freie Tage",
+    "vorgaenger_text": null
   },
   "2026-W40": {
     "besatzung_text": "NK Helms, Leander\nNEO Schäfer, Hagen\nTLM Erichsen, Torge\nGSM Petersen, Dennis\nNWB Matthiesen, Stephan\nNW Spangenberg, Jan Tim\nNWB* Müller, Jan\nAz Döhmen, Simon",
@@ -92,27 +94,29 @@
     "date_from": "2026-09-25",
     "date_to": "2026-10-02",
     "farbe_schiff": null,
-    "file": "40KW2026 1. Änderung.pdf",
-    "mtime": "2026-09-02 17:20",
+    "file": "40KW2026 2. Änderung.pdf",
+    "mtime": "2026-09-20 17:31",
     "nachbar_links": "Freie Tage",
     "rang": "NW",
-    "revision": 1,
-    "sequence": 0,
+    "revision": 2,
+    "sequence": 1,
     "summary": "Dienst auf SCHLESWIG - HOLSTEIN",
     "vorgaenger_text": "NK Englmaier, Jan\nNEO Donau, Markus\nTLM Kohn, Marco\nGSM Sievers, Jon\nNWB Porath, Ingo\nNWB Hansen, Frithjof\nNWB* Benmerad, Reda\nAz Döhmen, Simon"
   },
   "2026-W41": {
+    "besatzung_text": null,
     "category": "Freie Tage",
     "date_from": "2026-10-02",
     "date_to": "2026-10-09",
     "farbe_schiff": null,
-    "file": "41KW2026 1. Änderung.pdf",
-    "mtime": "2026-09-13 20:04",
+    "file": "41KW2026 2. Änderung.pdf",
+    "mtime": "2026-09-20 17:44",
     "nachbar_links": "SCHLESWIG - HOLSTEIN",
     "rang": "NW",
-    "revision": 1,
-    "sequence": 1,
-    "summary": "Freie Tage"
+    "revision": 2,
+    "sequence": 2,
+    "summary": "Freie Tage",
+    "vorgaenger_text": null
   },
   "2026-W42": {
     "besatzung_text": "NK Helms, Leander\nNEO Szönyi, Daniel\nTLM Erichsen, Torge\nGSM Petersen, Dennis\nNWB Matthiesen, Stephan\nNW Spangenberg, Jan Tim\nNWB* Müller, Jan",
@@ -120,14 +124,14 @@
     "date_from": "2026-10-09",
     "date_to": "2026-10-16",
     "farbe_schiff": null,
-    "file": "42KW2026.pdf",
-    "mtime": "2026-09-16 07:56",
+    "file": "42KW2026 1. Änderung.pdf",
+    "mtime": "2026-09-20 18:12",
     "nachbar_links": "Freie Tage",
     "rang": "NW",
-    "revision": 0,
-    "sequence": 1,
+    "revision": 1,
+    "sequence": 2,
     "summary": "Dienst auf SCHLESWIG - HOLSTEIN",
-    "vorgaenger_text": "NK Englmaier, Jan\nNEO Silberstein, Thimo\nTLM Kohn, Marco\nGSM Sievers, Jon\nNWB Porath, Ingo\nNWB Fabrizius, Philipp\nNWB* Benmerad, Reda\nAz Döhmen, Simon"
+    "vorgaenger_text": "NK Englmaier, Jan\nNEO Silberstein, Thimo\nTLM Kohn, Marco\nGSM Sievers, Jon\nNWB Porath, Ingo\nNWB Hansen, Frithjof\nNWB* Benmerad, Reda\nAz Döhmen, Simon"
   },
   "2026-W43": {
     "category": null,

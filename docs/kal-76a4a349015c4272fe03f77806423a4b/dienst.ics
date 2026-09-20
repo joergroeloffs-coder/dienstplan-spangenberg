@@ -168,22 +168,22 @@ DESCRIPTION:KW 38/2026\, Stand: 2026-09-13 19:51\, Datei: 38KW2026 4. Änderung.
 END:VEVENT
 BEGIN:VEVENT
 UID:dienstplan-2026-W40@wdr-besatzungsliste
-DTSTAMP:20260902T172000Z
-LAST-MODIFIED:20260902T172000Z
-SEQUENCE:0
+DTSTAMP:20260920T173100Z
+LAST-MODIFIED:20260920T173100Z
+SEQUENCE:1
 DTSTART;VALUE=DATE:20260925
 DTEND;VALUE=DATE:20261003
 SUMMARY:Dienst auf SCHLESWIG - HOLSTEIN
-DESCRIPTION:KW 40/2026\, Stand: 2026-09-02 17:20\, Datei: 40KW2026 1. Änderung.pdf\n\nBesatzung:\nNK Helms\, Leander\nNEO Schäfer\, Hagen\nTLM Erichsen\, Torge\nGSM Petersen\, Dennis\nNWB Matthiesen\, Stephan\nNW Spangenberg\, Jan Tim\nNWB* Müller\, Jan\nAz Döhmen\, Simon\n\nVorwoche (steigt aus):\nNK Englmaier\, Jan\nNEO Donau\, Markus\nTLM Kohn\, Marco\nGSM Sievers\, Jon\nNWB Porath\, Ingo\nNWB Hansen\, Frithjof\nNWB* Benmerad\, Reda\nAz Döhmen\, Simon
+DESCRIPTION:KW 40/2026\, Stand: 2026-09-20 17:31\, Datei: 40KW2026 2. Änderung.pdf\n\nBesatzung:\nNK Helms\, Leander\nNEO Schäfer\, Hagen\nTLM Erichsen\, Torge\nGSM Petersen\, Dennis\nNWB Matthiesen\, Stephan\nNW Spangenberg\, Jan Tim\nNWB* Müller\, Jan\nAz Döhmen\, Simon\n\nVorwoche (steigt aus):\nNK Englmaier\, Jan\nNEO Donau\, Markus\nTLM Kohn\, Marco\nGSM Sievers\, Jon\nNWB Porath\, Ingo\nNWB Hansen\, Frithjof\nNWB* Benmerad\, Reda\nAz Döhmen\, Simon
 END:VEVENT
 BEGIN:VEVENT
 UID:dienstplan-2026-W42@wdr-besatzungsliste
-DTSTAMP:20260916T075600Z
-LAST-MODIFIED:20260916T075600Z
-SEQUENCE:1
+DTSTAMP:20260920T181200Z
+LAST-MODIFIED:20260920T181200Z
+SEQUENCE:2
 DTSTART;VALUE=DATE:20261009
 DTEND;VALUE=DATE:20261017
 SUMMARY:Dienst auf SCHLESWIG - HOLSTEIN
-DESCRIPTION:KW 42/2026\, Stand: 2026-09-16 07:56\, Datei: 42KW2026.pdf\n\nBesatzung:\nNK Helms\, Leander\nNEO Szönyi\, Daniel\nTLM Erichsen\, Torge\nGSM Petersen\, Dennis\nNWB Matthiesen\, Stephan\nNW Spangenberg\, Jan Tim\nNWB* Müller\, Jan\n\nVorwoche (steigt aus):\nNK Englmaier\, Jan\nNEO Silberstein\, Thimo\nTLM Kohn\, Marco\nGSM Sievers\, Jon\nNWB Porath\, Ingo\nNWB Fabrizius\, Philipp\nNWB* Benmerad\, Reda\nAz Döhmen\, Simon
+DESCRIPTION:KW 42/2026\, Stand: 2026-09-20 18:12\, Datei: 42KW2026 1. Änderung.pdf\n\nBesatzung:\nNK Helms\, Leander\nNEO Szönyi\, Daniel\nTLM Erichsen\, Torge\nGSM Petersen\, Dennis\nNWB Matthiesen\, Stephan\nNW Spangenberg\, Jan Tim\nNWB* Müller\, Jan\n\nVorwoche (steigt aus):\nNK Englmaier\, Jan\nNEO Silberstein\, Thimo\nTLM Kohn\, Marco\nGSM Sievers\, Jon\nNWB Porath\, Ingo\nNWB Hansen\, Frithjof\nNWB* Benmerad\, Reda\nAz Döhmen\, Simon
 END:VEVENT
 END:VCALENDAR
