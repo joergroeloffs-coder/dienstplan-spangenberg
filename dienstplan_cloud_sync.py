@@ -139,6 +139,24 @@ FAHRPLAN_ZEIT_RE = re.compile(r"^\d{1,2}:\d{2}$")
 FAHRPLAN_WOCHENTAG_DATUM_RE = re.compile(r"^([A-Za-zÄÖÜäöüß]+)(\d{2}\.\d{2}\.\d{4})$")
 
 
+def parse_tiden_zeile(texte):
+    """"["HW","3:04","NW","9:31","HW","15:15","NW","22:09"] ->
+    "HW 3:04 / NW 9:31 / HW 15:15 / NW 22:09". Einzelne Werte koennen in
+    der PDF fehlen (z.B. "NW" ohne folgende Uhrzeit) - werden dann
+    ausgelassen."""
+    teile = []
+    i = 0
+    while i < len(texte):
+        label = texte[i]
+        if label in ("HW", "NW"):
+            if i + 1 < len(texte) and FAHRPLAN_ZEIT_RE.match(texte[i + 1]):
+                teile.append(f"{label} {texte[i + 1]}")
+                i += 2
+                continue
+        i += 1
+    return " / ".join(teile)
+
+
 def norm(text):
     return "".join(c for c in (text or "").upper() if c.isalnum())
 
@@ -355,6 +373,7 @@ def parse_fahrplan_pdf(pdf):
         kw = None
         datum = None
         spalten_x = None
+        tide = None
         for zeile in zeilen:
             texte = [w["text"] for w in zeile]
             if texte[:1] == ["Dienstplan"]:
@@ -367,6 +386,7 @@ def parse_fahrplan_pdf(pdf):
                 match = FAHRPLAN_WOCHENTAG_DATUM_RE.search(rest)
                 datum = match.group(2) if match else None
                 spalten_x = None
+                tide = None
                 continue
             # "Wittd" statt "Wittdün", um unempfindlich gegen abweichende
             # Umlaut-Kodierung zu sein.
@@ -374,6 +394,7 @@ def parse_fahrplan_pdf(pdf):
                 spalten_x = [w["x0"] for w in zeile[:4]]
                 continue
             if texte and (texte[0] == "HW" or texte[0].startswith(("HW", "NW"))):
+                tide = parse_tiden_zeile(texte) or None
                 continue
             if not (spalten_x and kw and datum):
                 continue
@@ -411,6 +432,7 @@ def parse_fahrplan_pdf(pdf):
                         "route": FAHRPLAN_ROUTEN[spalte],
                         "direkt": direkt,
                         "vorlaeufig": vorlaeufig,
+                        "tide": tide,
                     })
                     k += 1
     return ergebnisse
@@ -438,6 +460,9 @@ def gruppiere_abfahrten_pro_tag(abfahrten, schiff):
     for tag_str, eintraege in pro_tag.items():
         eintraege.sort(key=sortierschluessel)
         zeilen = []
+        tide_text = eintraege[0].get("tide")
+        if tide_text:
+            zeilen.append(tide_text)
         for a in eintraege:
             zusaetze = []
             if a["direkt"]:
