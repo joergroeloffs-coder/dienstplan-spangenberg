@@ -199,16 +199,19 @@
     "vorgaenger_text": null
   },
   "2026-W46": {
-    "category": null,
-    "date_from": null,
-    "date_to": null,
+    "besatzung_text": "NK Helms, Leander\nNEO Donau, Markus\nTLM Erichsen, Torge\nTWO Wassmann, Simon\nNWB Matthiesen, Stephan\nNW Spangenberg, Jan Tim\nNWB* Moths, Holger\nAz Döhmen, Simon",
+    "category": "SCHLESWIG - HOLSTEIN",
+    "date_from": "2026-11-06",
+    "date_to": "2026-11-13",
     "farbe_schiff": null,
-    "file": null,
-    "mtime": null,
-    "nachbar_links": null,
-    "rang": null,
-    "sequence": 0,
-    "summary": null
+    "file": "46KW2026.pdf",
+    "mtime": "2026-10-12 10:23",
+    "nachbar_links": "Freie Tage",
+    "rang": "NW",
+    "revision": 0,
+    "sequence": 1,
+    "summary": "Dienst auf SCHLESWIG - HOLSTEIN",
+    "vorgaenger_text": "NK Heimann, Mark\nNEO Schäfer, Hagen\nTLM Kohn, Marco\nGSM Petersen, Dennis\nNWB Porath, Ingo\nNWB Hansen, Frithjof\nNWB* Benmerad, Reda"
   },
   "2026-W47": {
     "category": null,
