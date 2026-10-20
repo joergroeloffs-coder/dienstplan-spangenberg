@@ -169,6 +169,16 @@
     "vorgaenger_text": null
   },
   "2026-W44": {
+    "abfahrten_pro_tag": {
+      "23.10.2026": "HW 0:29 / NW 6:58 / HW 12:48 / NW 19:37\n6:00 Wittdün-Wyk\n7:15 Wyk-Dagebüll\n8:25 Dagebüll-Wyk\n9:35 Wyk-Dagebüll\n10:40 Dagebüll-Wyk\n11:50 Wyk-Dagebüll\n13:00 Dagebüll-Wyk (direkt)\n15:15 Wittdün-Wyk\n16:30 Wyk-Dagebüll\n18:00 Dagebüll-Wyk\n19:00 Wyk-Wittdün",
+      "24.10.2026": "HW 1:21 / NW 7:52 / HW 13:33 / NW 20:21\n7:10 Wittdün-Wyk\n8:20 Wyk-Dagebüll\n9:35 Dagebüll-Wyk\n10:35 Wyk-Wittdün\n12:05 Wittdün-Wyk (direkt)\n14:05 Dagebüll-Wyk\n15:15 Wyk-Dagebüll\n16:30 Dagebüll-Wyk\n17:40 Wyk-Dagebüll\n19:00 Dagebüll-Wyk",
+      "25.10.2026": "HW 2:02 / NW 7:36 / HW 13:13 / NW 20:03\n6:00 Wyk-Dagebüll\n7:15 Dagebüll-Wyk\n8:15 Wyk-Wittdün\n9:30 Wittdün-Wyk\n10:50 Wyk-Dagebüll\n12:35 Dagebüll-Wyk\n13:45 Wyk-Dagebüll\n15:05 Dagebüll-Wyk\n16:00 Wyk-Wittdün\n17:25 Wittdün-Wyk\n18:40 Wyk-Dagebüll\n20:00 Dagebüll-Wyk\n20:55 Wyk-Wittdün",
+      "26.10.2026": "HW 1:42 / NW 8:20 / HW 13:57 / NW 20:45\n6:00 Wittdün-Wyk\n7:15 Wyk-Dagebüll\n8:25 Dagebüll-Wyk\n9:35 Wyk-Dagebüll\n10:40 Dagebüll-Wyk\n11:50 Wyk-Dagebüll\n13:00 Dagebüll-Wyk (direkt)\n15:15 Wittdün-Wyk\n16:30 Wyk-Dagebüll\n18:00 Dagebüll-Wyk\n19:00 Wyk-Wittdün",
+      "27.10.2026": "HW 2:21 / NW 9:02 / HW 14:40 / NW 21:25\n6:00 Wittdün-Wyk\n7:15 Wyk-Dagebüll\n8:25 Dagebüll-Wyk\n9:35 Wyk-Dagebüll\n10:40 Dagebüll-Wyk\n11:50 Wyk-Dagebüll\n13:00 Dagebüll-Wyk (direkt)\n15:15 Wittdün-Wyk\n16:30 Wyk-Dagebüll\n18:00 Dagebüll-Wyk\n19:00 Wyk-Wittdün",
+      "28.10.2026": "HW 2:59 / NW 9:42 / HW 15:21 / NW 22:03\n6:00 Wittdün-Wyk\n7:15 Wyk-Dagebüll\n8:25 Dagebüll-Wyk\n9:35 Wyk-Dagebüll\n10:40 Dagebüll-Wyk\n11:50 Wyk-Dagebüll\n13:00 Dagebüll-Wyk (direkt)\n15:15 Wittdün-Wyk\n16:30 Wyk-Dagebüll\n18:00 Dagebüll-Wyk\n19:00 Wyk-Wittdün",
+      "29.10.2026": "HW 3:36 / NW 10:21 / HW 16:02 / NW 22:40\n6:00 Wittdün-Wyk\n7:15 Wyk-Dagebüll\n8:25 Dagebüll-Wyk\n9:35 Wyk-Dagebüll\n10:40 Dagebüll-Wyk\n11:50 Wyk-Dagebüll\n13:00 Dagebüll-Wyk (direkt)\n15:15 Wittdün-Wyk\n16:30 Wyk-Dagebüll\n18:00 Dagebüll-Wyk\n19:00 Wyk-Wittdün",
+      "30.10.2026": "HW 4:14 / NW 11:01 / HW 16:45 / NW 23:18\n6:00 Wittdün-Wyk\n7:15 Wyk-Dagebüll\n8:25 Dagebüll-Wyk\n9:35 Wyk-Dagebüll\n10:40 Dagebüll-Wyk\n11:50 Wyk-Dagebüll\n13:00 Dagebüll-Wyk (direkt)\n15:15 Wittdün-Wyk\n16:30 Wyk-Dagebüll\n18:00 Dagebüll-Wyk\n19:00 Wyk-Wittdün"
+    },
     "besatzung_text": "NK Hellmann, Johann-Eck\nNEO Szönyi, Daniel\nTLM Erichsen, Torge\nTWO Wassmann, Simon\nNWB Matthiesen, Stephan\nNW Spangenberg, Jan Tim\nNWB* Anders, Frank",
     "category": "SCHLESWIG - HOLSTEIN",
     "date_from": "2026-10-23",
@@ -214,16 +224,19 @@
     "vorgaenger_text": "NK Heimann, Mark\nNEO Schäfer, Hagen\nTLM Kohn, Marco\nGSM Petersen, Dennis\nNWB Porath, Ingo\nNWB Hansen, Frithjof\nNWB* Benmerad, Reda"
   },
   "2026-W47": {
-    "category": null,
-    "date_from": null,
-    "date_to": null,
+    "besatzung_text": null,
+    "category": "Freie Tage",
+    "date_from": "2026-11-13",
+    "date_to": "2026-11-20",
     "farbe_schiff": null,
-    "file": null,
-    "mtime": null,
-    "nachbar_links": null,
-    "rang": null,
-    "sequence": 0,
-    "summary": null
+    "file": "47KW2026.pdf",
+    "mtime": "2026-10-19 08:47",
+    "nachbar_links": "Freie Tage",
+    "rang": "NW",
+    "revision": 0,
+    "sequence": 1,
+    "summary": "Freie Tage",
+    "vorgaenger_text": null
   },
   "2026-W48": {
     "category": null,
