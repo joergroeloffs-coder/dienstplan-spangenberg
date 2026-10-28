@@ -416,4 +416,14 @@ DTEND;VALUE=DATE:20261114
 SUMMARY:Dienst auf SCHLESWIG - HOLSTEIN
 DESCRIPTION:KW 46/2026\, Stand: 2026-10-12 10:23\, Datei: 46KW2026.pdf\n\nBesatzung:\nNK Helms\, Leander\nNEO Donau\, Markus\nTLM Erichsen\, Torge\nTWO Wassmann\, Simon\nNWB Matthiesen\, Stephan\nNW Spangenberg\, Jan Tim\nNWB* Moths\, Holger\nAz Döhmen\, Simon\n\nVorwoche (steigt aus):\nNK Heimann\, Mark\nNEO Schäfer\, Hagen\nTLM Kohn\, Marco\nGSM Petersen\, Dennis\nNWB Porath\, Ingo\nNWB Hansen\, Frithjof\nNWB* Benmerad\, Reda
 END:VEVENT
+BEGIN:VEVENT
+UID:dienstplan-2026-W48@wdr-besatzungsliste
+DTSTAMP:20261028T051800Z
+LAST-MODIFIED:20261028T051800Z
+SEQUENCE:1
+DTSTART;VALUE=DATE:20261120
+DTEND;VALUE=DATE:20261128
+SUMMARY:Dienst auf Einweisung
+DESCRIPTION:KW 48/2026\, Stand: 2026-10-28 05:18\, Datei: 48KW2026.pdf
+END:VEVENT
 END:VCALENDAR
