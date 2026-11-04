@@ -488,12 +488,22 @@ DESCRIPTION:KW 46/2026\, Stand: 2026-10-12 10:23\, Datei: 46KW2026.pdf\n\nAbfahr
 END:VEVENT
 BEGIN:VEVENT
 UID:dienstplan-2026-W48@wdr-besatzungsliste
-DTSTAMP:20261028T051800Z
-LAST-MODIFIED:20261028T051800Z
-SEQUENCE:1
+DTSTAMP:20261104T062700Z
+LAST-MODIFIED:20261104T062700Z
+SEQUENCE:2
 DTSTART;VALUE=DATE:20261120
 DTEND;VALUE=DATE:20261128
 SUMMARY:Dienst auf Einweisung
-DESCRIPTION:KW 48/2026\, Stand: 2026-10-28 05:18\, Datei: 48KW2026.pdf
+DESCRIPTION:KW 48/2026\, Stand: 2026-11-04 06:27\, Datei: 48KW2026 2. Änderung.pdf
+END:VEVENT
+BEGIN:VEVENT
+UID:dienstplan-2026-W49@wdr-besatzungsliste
+DTSTAMP:20261104T062800Z
+LAST-MODIFIED:20261104T062800Z
+SEQUENCE:1
+DTSTART;VALUE=DATE:20261127
+DTEND;VALUE=DATE:20261205
+SUMMARY:Dienst auf UTHLANDE
+DESCRIPTION:KW 49/2026\, Stand: 2026-11-04 06:28\, Datei: 49KW2026 1. Änderung.pdf\n\nBesatzung:\nNK Krauledat\, Norbert\nNEO Kohn\, Otis\nTLM Petersen\, Lukas\nGSM Bersuch\, Sören\nNWB Spellien\, Henning\nNWB Woydack\, Ole\nNW* Spangenberg\, Jan Tim\nAz Skora\, Josse\n\nVorwoche (steigt aus):\nNK Blank\, Marc\nNEO Roeloffs\, Jörg\nTLM Isermann\, Tobias\nGSM Peters\, Olaf\nNWB Allwörden\, André von\nNWB Petersen\, Ralf\nNWB* Moths\, Holger\nAz Skora\, Josse ab 24.11.
 END:VEVENT
 END:VCALENDAR
