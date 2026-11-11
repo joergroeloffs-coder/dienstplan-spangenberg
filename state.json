@@ -279,16 +279,19 @@
     "vorgaenger_text": "NK Blank, Marc\nNEO Roeloffs, Jörg\nTLM Isermann, Tobias\nGSM Peters, Olaf\nNWB Allwörden, André von\nNWB Petersen, Ralf\nNWB* Moths, Holger\nAz Skora, Josse ab 24.11."
   },
   "2026-W50": {
-    "category": null,
-    "date_from": null,
-    "date_to": null,
+    "besatzung_text": null,
+    "category": "URLAUB",
+    "date_from": "2026-12-04",
+    "date_to": "2026-12-11",
     "farbe_schiff": null,
-    "file": null,
-    "mtime": null,
-    "nachbar_links": null,
-    "rang": null,
-    "sequence": 0,
-    "summary": null
+    "file": "50KW2026.pdf",
+    "mtime": "2026-11-11 05:41",
+    "nachbar_links": "URLAUB",
+    "rang": "NW*",
+    "revision": 0,
+    "sequence": 1,
+    "summary": "Urlaub",
+    "vorgaenger_text": null
   },
   "2026-W51": {
     "category": null,
