@@ -508,12 +508,12 @@ DESCRIPTION:KW 49/2026\, Stand: 2026-11-05 06:14\, Datei: 49KW2026 2. Änderung.
 END:VEVENT
 BEGIN:VEVENT
 UID:dienstplan-2026-W53@wdr-besatzungsliste
-DTSTAMP:20261115T121100Z
-LAST-MODIFIED:20261115T121100Z
-SEQUENCE:1
+DTSTAMP:20261120T054800Z
+LAST-MODIFIED:20261120T054800Z
+SEQUENCE:2
 DTSTART;VALUE=DATE:20261223
 DTEND;VALUE=DATE:20261231
 SUMMARY:Dienst auf SCHLESWIG - HOLSTEIN
-DESCRIPTION:KW 53/2026\, Stand: 2026-11-15 12:11\, Datei: 53KW2026 1. Änderung.pdf\n\nBesatzung:\nNK Englmaier\, Jan\nNEO Donau\, Markus\nTLM Erichsen\, Torge\nGSM Jähnig Martin\nNWB Hansen\, Frithjof\nNWB Porath\, Ingo\nNW* Spangenberg\, Jan Tim\n\nVorwoche (steigt aus):\nNK Hellmann\, Johann-Eck\nNEO Szönyi\, Daniel\nTLM Kohn\, Marco\nGSM Bersuch\, Sören\nNW Pfeifer\, Sebastian\nNWB Matthiesen\, Stephan\nNWB* Benmerad\, Reda
+DESCRIPTION:KW 53/2026\, Stand: 2026-11-20 05:48\, Datei: 53KW2026 2. Änderung.pdf\n\nBesatzung:\nNK Englmaier\, Jan\nNEO Donau\, Markus\nTLM Erichsen\, Torge\nGSM Jähnig Martin\nNWB Hansen\, Frithjof\nNWB Porath\, Ingo\nNW* Spangenberg\, Jan Tim\n\nVorwoche (steigt aus):\nNK Hellmann\, Johann-Eck\nNEO Roeloffs\, Jörg\nTLM Kohn\, Marco\nGSM Bersuch\, Sören\nNW Pfeifer\, Sebastian\nNWB Matthiesen\, Stephan\nNWB* Benmerad\, Reda
 END:VEVENT
 END:VCALENDAR
