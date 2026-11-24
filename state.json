@@ -264,6 +264,16 @@
     "vorgaenger_text": null
   },
   "2026-W49": {
+    "abfahrten_pro_tag": {
+      "01.12.2026": "HW 6:37 / NW 0:46 / HW 19:21 / NW 13:32\n6:00 Wittdün-Wyk\n7:15 Wyk-Dagebüll\n8:25 Dagebüll-Wyk\n9:35 Wyk-Dagebüll\n11:00 Dagebüll-Wyk\n12:10 Wyk-Dagebüll\n14:05 Dagebüll-Wyk\n15:15 Wyk-Dagebüll\n16:30 Dagebüll-Wyk\n17:40 Wyk-Dagebüll\n18:45 Dagebüll-Wyk\n19:40 Wyk-Wittdün",
+      "02.12.2026": "HW 7:39 / NW 1:44 / HW 20:26 / NW 14:35\n6:00 Wittdün-Wyk\n7:15 Wyk-Dagebüll\n8:25 Dagebüll-Wyk\n9:35 Wyk-Dagebüll\n11:00 Dagebüll-Wyk\n12:10 Wyk-Dagebüll\n14:05 Dagebüll-Wyk",
+      "03.12.2026": "HW 8:47 / NW 2:50 / HW 21:35 / NW 15:44\n6:00 Wyk-Dagebüll\n7:15 Dagebüll-Wyk\n8:15 Wyk-Wittdün\n9:30 Wittdün-Wyk\n10:50 Wyk-Dagebüll\n12:00 Dagebüll-Wyk",
+      "04.12.2026": "HW 9:59 / NW 4:03 / HW 22:43 / NW 16:54\n6:00 Wyk-Dagebüll\n7:15 Dagebüll-Wyk\n8:15 Wyk-Wittdün\n9:30 Wittdün-Wyk\n10:50 Wyk-Dagebüll\n12:00 Dagebüll-Wyk\n13:20 Wyk-Dagebüll\n15:05 Dagebüll-Wyk\n16:00 Wyk-Wittdün\n17:25 Wittdün-Wyk\n18:40 Wyk-Dagebüll\n19:45 Dagebüll-Wyk\n20:40 Wyk-Wittdün",
+      "27.11.2026": "HW 3:17 / NW 10:10 / HW 15:51 / NW 22:27\n6:00 Wyk-Dagebüll\n7:15 Dagebüll-Wyk\n8:15 Wyk-Wittdün\n9:30 Wittdün-Wyk\n10:50 Wyk-Dagebüll\n12:00 Dagebüll-Wyk\n13:20 Wyk-Dagebüll\n15:05 Dagebüll-Wyk\n16:00 Wyk-Wittdün\n17:25 Wittdün-Wyk\n18:40 Wyk-Dagebüll\n19:45 Dagebüll-Wyk\n20:40 Wyk-Wittdün",
+      "28.11.2026": "HW 4:05 / NW 10:59 / HW 16:41 / NW 23:11\n7:10 Wittdün-Wyk\n8:20 Wyk-Dagebüll\n9:35 Dagebüll-Wyk\n10:35 Wyk-Wittdün\n12:05 Wittdün-Wyk\n13:20 Wyk-Dagebüll\n15:05 Dagebüll-Wyk\n16:00 Wyk-Wittdün\n17:25 Wittdün-Wyk\n18:40 Wyk-Dagebüll\n19:45 Dagebüll-Wyk",
+      "29.11.2026": "HW 4:53 / NW 11:47 / HW 17:30 / NW 23:57\n15:15 Wyk-Dagebüll\n16:30 Dagebüll-Wyk\n17:40 Wyk-Dagebüll\n18:45 Dagebüll-Wyk\n19:40 Wyk-Wittdün",
+      "30.11.2026": "HW 5:43 / HW 18:22 / NW 12:37\n6:00 Wittdün-Wyk\n7:15 Wyk-Dagebüll\n8:25 Dagebüll-Wyk\n9:35 Wyk-Dagebüll\n11:00 Dagebüll-Wyk\n12:10 Wyk-Dagebüll\n14:05 Dagebüll-Wyk\n15:15 Wyk-Dagebüll\n16:30 Dagebüll-Wyk\n17:40 Wyk-Dagebüll\n18:45 Dagebüll-Wyk\n19:40 Wyk-Wittdün"
+    },
     "besatzung_text": "NK Krauledat, Norbert\nNEO Kohn, Otis\nTLM Petersen, Lukas\nGSM Bersuch, Sören\nNWB Spellien, Henning\nNWB Woydack, Ole\nNW* Spangenberg, Jan Tim\nAz Skora, Josse",
     "category": "UTHLANDE",
     "date_from": "2026-11-27",
